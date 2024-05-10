@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#" style="color: #623e2a;"><b>Explore</b></a></li>
+            <li><a href="#">Locality</a></li>
+            <li><a href="#">Trending</a></li>
+        </ul>
+        <form class="search-bar" action="#" method="get">
+            <input type="text" placeholder="Search...">
+            <button type="submit">Search</button>
+        </form>
+        <div class="cart">
+          <button class="cart-button" onclick="location.href='#';">
+              <img src="cart.png" alt="Cart">
+              Cart
+          </button>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Sort by Price</button>
+            <div class="dropdown-content">
+                <a href="#" onclick="sortProductsByPrice('ascending');">Low to High</a>
+                <a href="#" onclick="sortProductsByPrice('descending');">High to Low</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="product">
+        <img src="product1.jpg" alt="Product 1">
+        <h3>Product Name 1</h3>
+        <p id="price1" class="product-price">₹ 999</p>
+        <button>Add to cart</button>
+    </section>
+    <section class="product">
+        <img src="product2.jpg" alt="Product 2">
+        <h3>Product Name 2</h3>
+        <p id="price2" class="product-price">₹ 599</p>
+        <button>Add to cart</button>
+    </section>
+    <section class="product">
+        <img src="product3.jpg" alt="Product 3">
+        <h3>Product Name</h3>
+        <p id="price3" class="product-price">₹ 1599</p>
+        <button>Add to cart</button>
+    </section>
+    <section class="product">
+        <img src="product4.jpg" alt="Product 4">
+        <h3>Product Name</h3>
+        <p id="price4" class="product-price">₹ 399</p>
+        <button>Add to cart</button>
+    </section>
+    <section class="product">
+        <img src="product5.jpg" alt="Product 5">
+        <h3>Product Name</h3>
+        <p id="price5" class="product-price">₹ 499</p>
+        <button>Add to cart</button>
+    </section>
+    <section class="product">
+        <img src="product6.jpg" alt="Product 6">
+        <h3>Product Name</h3>
+        <p id="price6" class="product-price">₹ 799</p>
+        <button>Add to cart</button>
+    </section>
+    <section class="product">
+        <img src="product7.jpg" alt="Product 7">
+        <h3>Product Name</h3>
+        <p id="price7" class="product-price">₹ 699</p>
+        <button>Add to cart</button>
+    </section>
+    <section class="product">
+        <img src="product8.jpg" alt="Product 8">
+        <h3>Product Name</h3>
+        <p id="price8" class="product-price">₹ 899</p>
+        <button>Add to cart</button>
+    </section>
+    <!-- More product sections can be added here -->
+</main>
+
+<footer>
+    <!-- Footer content goes here -->
+</footer>
+
+    <script src="scripts.js"></script>
+
+</body>
+</html>
