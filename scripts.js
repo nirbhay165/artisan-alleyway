@@ -42,3 +42,28 @@ function sortProductsByPrice(order) {
         main.appendChild(section);
     });
 }
+const searchInput = document.getElementById('searchInput');
+
+// Function to filter products based on search input
+function filterProducts() {
+    const searchTerm = searchInput.value.trim().toLowerCase(); // Get the search term and normalize it
+
+    // Get all product sections
+    const productSections = document.querySelectorAll('.product');
+
+    // Filter product sections based on the search term
+    productSections.forEach(section => {
+        const productName = section.querySelector('h3').textContent.toLowerCase(); // Get the product name
+        const isVisible = productName.includes(searchTerm); // Check if product name contains the search term
+
+        // Toggle visibility based on search result
+        section.style.display = isVisible ? 'block' : 'none';
+    });
+
+    // Show a message if no products match the search term
+    const noResultsMessage = document.getElementById('noResultsMessage');
+    noResultsMessage.style.display = productSections.length === 0 ? 'block' : 'none';
+}
+
+// Add event listener to the search input
+searchInput.addEventListener('input', filterProducts);
